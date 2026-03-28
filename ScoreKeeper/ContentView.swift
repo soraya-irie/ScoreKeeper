@@ -15,7 +15,7 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("Score Keeper")
                 .font(.title)
                 .bold()
