@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Player {
+struct Player: Identifiable {
     var name: String
     var score: Int
 }
