@@ -23,8 +23,10 @@ struct ContentView: View {
             
             Grid {
                 ForEach($players) { $player in
-                    TextField("Name", text: $player.name)
-                    Stepper("\(player.score)", value: $player.score)
+                    GridRow {
+                        TextField("Name", text: $player.name)
+                        Stepper("\(player.score)", value: $player.score)
+                    }
                 }
             }
             Button("Add Player", systemImage: "plus") {
