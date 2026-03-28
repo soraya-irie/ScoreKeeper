@@ -16,7 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            ForEach(0..<players.count, id: \.description) { index in
+            ForEach($players) { $players in
                 TextField("Name", text: $players[index])
                 Stepper("\(scores[index])", value: $scores[index])
             }
