@@ -21,8 +21,7 @@ struct ContentView: View {
                 Stepper("\(player.score)", value: $player.score)
             }
             Button("Add Player", systemImage: "plus") {
-                players.append("")
-                scores.append(0)
+                players.append(Player(name: "", score: 0))
             }
             
             Spacer()
