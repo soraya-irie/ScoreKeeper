@@ -42,7 +42,7 @@ struct ContentView: View {
             .padding(.vertical)
             
             Button("Add Player", systemImage: "plus") {
-                players.append(Player(name: "", score: 0))
+                scoreboard.players.append(Player(name: "", score: 0))
             }
             
             Spacer()
