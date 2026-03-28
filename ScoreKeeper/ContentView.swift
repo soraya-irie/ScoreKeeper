@@ -18,7 +18,7 @@ struct ContentView: View {
         VStack {
             ForEach($players) { $player in
                 TextField("Name", text: $player.name)
-                Stepper("\(scores[index])", value: $scores[index])
+                Stepper("\(player.score)", value: $player.score)
             }
             Button("Add Player", systemImage: "plus") {
                 players.append("")
