@@ -24,6 +24,7 @@ struct ContentView: View {
             Grid {
                 GridRow {
                     Text("Player")
+                        .gridColumnAlignment(.leading)
                     Text("Score")
                 }
                 .font(.headline)
