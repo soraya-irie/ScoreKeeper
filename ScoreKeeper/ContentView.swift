@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var players: [String] = ["Elisha", "Andre", "Jasmine"]
-    @State private var scores: [Int] = []
+    @State private var scores: [Int] = [0, 0, 0]
     
     var body: some View {
         VStack {
