@@ -16,6 +16,11 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            Text("Score Keeper")
+                .font(.title)
+                .bold()
+                .padding(.bottom)
+            
             ForEach($players) { $player in
                 TextField("Name", text: $player.name)
                 Stepper("\(player.score)", value: $player.score)
