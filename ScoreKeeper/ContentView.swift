@@ -31,7 +31,9 @@ struct ContentView: View {
                 ForEach($players) { $player in
                     GridRow {
                         TextField("Name", text: $player.name)
+                        Text("\(player.score)")
                         Stepper("\(player.score)", value: $player.score)
+                            .labelsHidden()
                     }
                 }
             }
