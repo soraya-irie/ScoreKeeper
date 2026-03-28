@@ -22,6 +22,12 @@ struct ContentView: View {
                 .padding(.bottom)
             
             Grid {
+                GridRow {
+                    Text("Player")
+                    Text("Score")
+                }
+                .font(.headline)
+                
                 ForEach($players) { $player in
                     GridRow {
                         TextField("Name", text: $player.name)
