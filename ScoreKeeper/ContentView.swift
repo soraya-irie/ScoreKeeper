@@ -56,8 +56,7 @@ struct ContentView: View {
                 Button("Reset Game", systemImage: "arrow.counterclockwise") {
                     scoreboard.state = .setup
                 }
-            default:
-                EmptyView()
+
             }
         }
         .padding()
