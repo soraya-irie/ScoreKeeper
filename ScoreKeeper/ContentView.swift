@@ -42,6 +42,11 @@ struct ContentView: View {
             }
             
             Spacer()
+
+            switch scoreboard.state {
+            default:
+                EmptyView()
+            }
         }
         .padding()
     }
