@@ -44,6 +44,10 @@ struct ContentView: View {
             Spacer()
 
             switch scoreboard.state {
+            case .setup:
+                Button("Start Game", systemImage: "play.fill") {
+                    scoreboard.state = .playing
+                }
             default:
                 EmptyView()
             }
