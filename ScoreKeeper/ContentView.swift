@@ -52,6 +52,10 @@ struct ContentView: View {
                 Button("End Game",   systemImage: "stop.fill") {
                     scoreboard.state = .gameOver
                 }
+            case .gameOver:
+                Button("Reset Game", systemImage: "arrow.counterclockwise") {
+                    scoreboard.state = .setup
+                }
             default:
                 EmptyView()
             }
