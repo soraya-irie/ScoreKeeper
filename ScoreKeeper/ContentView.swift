@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var scoreboard = Scoreboard()
-
+    private var startingPoints = 0
 
     var body: some View {
         VStack(alignment: .leading) {
