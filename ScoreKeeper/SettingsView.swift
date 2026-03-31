@@ -21,5 +21,6 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    @Previewable @State var startingPoints = 10
+    SettingsView(startingPoints: $startingPoints)
 }
