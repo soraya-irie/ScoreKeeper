@@ -12,7 +12,10 @@ struct ScoreKeeperTests {
 
     @Test("Reset player scores")
     func resetScores() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+        var scoreboard = Scoreboard(players: [
+            Player(name: "Elisha", score: 0),
+            Player(name: "Andre" , score: 5),
+        ])
     }
 
 }
