@@ -6,6 +6,7 @@
 //
 
 import Testing
+@testable import ScoreKeeper
 
 struct ScoreKeeperTests {
 
