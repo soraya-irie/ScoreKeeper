@@ -25,6 +25,7 @@ struct SettingsView: View {
             }
         }
         .padding()
+        .background(.thinMaterial, in: .rect(cornerRadius: 10.0))
     }
 }
 
