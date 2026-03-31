@@ -15,6 +15,9 @@ struct SettingsView: View {
             Text("Game Rules")
                 .font(.headline)
             Divider()
+            Picker("Starting points", selection: $startingPoints) {
+
+            }
         }
         .padding()
     }
