@@ -16,7 +16,12 @@ struct SettingsView: View {
                 .font(.headline)
             Divider()
             Picker("Starting points", selection: $startingPoints) {
-
+                Text("0 starting points")
+                    .tag(0)
+                Text("10 starting points")
+                    .tag(10)
+                Text("20 starting points")
+                    .tag(20)
             }
         }
         .padding()
