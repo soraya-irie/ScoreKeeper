@@ -16,6 +16,7 @@ struct ScoreKeeperTests {
             Player(name: "Elisha", score: 0),
             Player(name: "Andre" , score: 5),
         ])
+        scoreboard.resetScores(to: 0)
     }
 
 }
