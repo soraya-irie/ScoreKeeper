@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Binding var startingPoints: Int
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("Game Rules")
