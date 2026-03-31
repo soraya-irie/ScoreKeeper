@@ -9,7 +9,8 @@ import Testing
 
 struct ScoreKeeperTests {
 
-    @Test func example() async throws {
+    @Test("Reset player scores")
+    func resetScores() async throws {
         // Write your test here and use APIs like `#expect(...)` to check expected conditions.
     }
 
