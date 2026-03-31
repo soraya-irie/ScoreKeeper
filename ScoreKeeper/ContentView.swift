@@ -17,7 +17,9 @@ struct ContentView: View {
                 .font(.title)
                 .bold()
                 .padding(.bottom)
-            
+
+            SettingsView(startingPoints: $startingPoints)
+
             Grid {
                 GridRow {
                     Text("Player")
