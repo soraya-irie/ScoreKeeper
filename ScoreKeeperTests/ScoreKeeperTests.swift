@@ -17,6 +17,10 @@ struct ScoreKeeperTests {
             Player(name: "Andre" , score: 5),
         ])
         scoreboard.resetScores(to: 0)
+
+        for player in scoreboard.players {
+            #expect(player.score == 0)
+        }
     }
 
 }
