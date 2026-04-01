@@ -18,7 +18,8 @@ struct Scoreboard {
     var doesHighestScoreWin = true
 
     var winners: [Player] {
-        players
+        guard state == .gameOver else { return [] }
+        return players
     }
 
     mutating func resetScores(to newValue: Int) {
