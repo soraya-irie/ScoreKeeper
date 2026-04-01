@@ -36,4 +36,9 @@ struct ScoreKeeperTests {
         let winners = scoreboard.winners
         #expect(winners == [Player(name: "Andre", score: 4)])
     }
+
+    @Test("Lowest score wins")
+    func lowestScoroWins() {
+
+    }
 }
