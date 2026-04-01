@@ -23,4 +23,8 @@ struct ScoreKeeperTests {
         }
     }
 
+    @Test("Highest score wins")
+    func highestScoreWins() {
+
+    }
 }
