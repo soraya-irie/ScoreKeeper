@@ -27,7 +27,10 @@ struct Scoreboard {
                 winningScore = Int.max(player.score, winningScore)
             }
         } else {
-
+            winningScore = Int.max
+            for player in players {
+                winningScore = Int.min(player.score, winningScore)
+            }
         }
 
         return players
