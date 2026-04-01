@@ -25,6 +25,13 @@ struct ScoreKeeperTests {
 
     @Test("Highest score wins")
     func highestScoreWins() {
-
+        let scoreboard = Scoreboard(
+            players: [
+                Player(name: "Elisha", score: 0),
+                Player(name: "Andre" , score: 4),
+            ],
+            state: .gameOver,
+            doesHighestScoreWin: true
+        )
     }
 }
