@@ -19,6 +19,14 @@ struct Scoreboard {
 
     var winners: [Player] {
         guard state == .gameOver else { return [] }
+
+        var winningScore = 0
+        if doesHighestScoreWin {
+
+        } else {
+
+        }
+
         return players
     }
 
