@@ -38,14 +38,14 @@ struct ScoreKeeperTests {
     }
 
     @Test("Lowest score wins")
-    func lowestScoroWins() {
+    func lowestScoreWins() {
         let scoreboard = Scoreboard(
             players: [
                 Player(name: "Elisha", score: 0),
                 Player(name: "Andre" , score: 4),
             ],
             state: .gameOver,
-            doesHighestScoreWin: true
+            doesHighestScoreWin: false
         )
         let winners = scoreboard.winners
         #expect(winners == [Player(name: "Elisha", score: 0)])
