@@ -16,6 +16,12 @@ struct SettingsView: View {
             Text("Game Rules")
                 .font(.headline)
             Divider()
+            Picker("Win condition", selection: $doesHighestScoreWin) {
+                Text("Highest Score Wins")
+                    .tag(true)
+                Text("Lowest Score Wins")
+                    .tag(false)
+            }
             Picker("Starting points", selection: $startingPoints) {
                 Text("0 starting points")
                     .tag(0)
