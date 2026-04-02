@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Binding var doesHighestScoreWin: Bool
     @Binding var startingPoints: Int
 
     var body: some View {
@@ -30,6 +31,7 @@ struct SettingsView: View {
 }
 
 #Preview {
+    @Previewable @State var doesHighestScoreWin = true
     @Previewable @State var startingPoints = 10
-    SettingsView(startingPoints: $startingPoints)
+    SettingsView(doesHighestScoreWin: $doesHighestScoreWin, startingPoints: $startingPoints)
 }
