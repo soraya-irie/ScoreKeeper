@@ -19,6 +19,7 @@ struct ContentView: View {
                 .padding(.bottom)
 
             SettingsView(doesHighestScoreWin: $scoreboard.doesHighestScoreWin, startingPoints: $startingPoints)
+                .disabled(scoreboard.state != .setup)
 
             Grid {
                 GridRow {
