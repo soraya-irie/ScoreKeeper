@@ -75,6 +75,10 @@ struct ContentView: View {
                 }
                 Spacer()
             }
+            .buttonStyle(.bordered)
+            .buttonBorderShape(.capsule)
+            .controlSize(.large)
+            .tint(.blue)
         }
         .padding()
     }
