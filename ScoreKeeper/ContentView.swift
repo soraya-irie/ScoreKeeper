@@ -18,7 +18,7 @@ struct ContentView: View {
                 .bold()
                 .padding(.bottom)
 
-            SettingsView(startingPoints: $startingPoints)
+            SettingsView(doesHighestScoreWin: $scoreboard.doesHighestScoreWin, startingPoints: $startingPoints)
 
             Grid {
                 GridRow {
