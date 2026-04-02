@@ -24,12 +24,12 @@ struct Scoreboard {
         if doesHighestScoreWin {
             winningScore = Int.min
             for player in players {
-                winningScore = Int.max(player.score, winningScore)
+                winningScore = max(player.score, winningScore)
             }
         } else {
             winningScore = Int.max
             for player in players {
-                winningScore = Int.min(player.score, winningScore)
+                winningScore = min(player.score, winningScore)
             }
         }
 
