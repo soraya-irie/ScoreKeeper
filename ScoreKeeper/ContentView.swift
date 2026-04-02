@@ -52,6 +52,7 @@ struct ContentView: View {
             Button("Add Player", systemImage: "plus") {
                 scoreboard.players.append(Player(name: "", score: 0))
             }
+            .opacity(scoreboard.state == .setup ? 1.0 : 0)
             
             Spacer()
 
