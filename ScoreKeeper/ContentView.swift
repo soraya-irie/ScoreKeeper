@@ -56,21 +56,24 @@ struct ContentView: View {
             
             Spacer()
 
-            switch scoreboard.state {
-            case .setup:
-                Button("Start Game", systemImage: "play.fill") {
-                    scoreboard.state = .playing
-                    scoreboard.resetScores(to: startingPoints)
+            HStack {
+                Spacer()
+                switch scoreboard.state {
+                case .setup:
+                    Button("Start Game", systemImage: "play.fill") {
+                        scoreboard.state = .playing
+                        scoreboard.resetScores(to: startingPoints)
+                    }
+                case .playing:
+                    Button("End Game",   systemImage: "stop.fill") {
+                        scoreboard.state = .gameOver
+                    }
+                case .gameOver:
+                    Button("Reset Game", systemImage: "arrow.counterclockwise") {
+                        scoreboard.state = .setup
+                    }
                 }
-            case .playing:
-                Button("End Game",   systemImage: "stop.fill") {
-                    scoreboard.state = .gameOver
-                }
-            case .gameOver:
-                Button("Reset Game", systemImage: "arrow.counterclockwise") {
-                    scoreboard.state = .setup
-                }
-
+                Spacer()
             }
         }
         .padding()
