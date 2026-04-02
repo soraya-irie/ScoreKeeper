@@ -33,7 +33,9 @@ struct Scoreboard {
             }
         }
 
-        return players
+        return players.filter { player in
+            player.score == winningScore
+        }
     }
 
     mutating func resetScores(to newValue: Int) {
