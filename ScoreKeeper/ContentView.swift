@@ -26,6 +26,7 @@ struct ContentView: View {
                     Text("Player")
                         .gridColumnAlignment(.leading)
                     Text("Score")
+                        .opacity(scoreboard.state == .setup ? 0 : 1.0)
                 }
                 .font(.headline)
                 
@@ -39,8 +40,10 @@ struct ContentView: View {
                             TextField("Name", text: $player.name)
                         }
                         Text("\(player.score)")
+                            .opacity(scoreboard.state == .setup ? 0 : 1.0)
                         Stepper("\(player.score)", value: $player.score)
                             .labelsHidden()
+                            .opacity(scoreboard.state == .setup ? 0 : 1.0)
                     }
                 }
             }
