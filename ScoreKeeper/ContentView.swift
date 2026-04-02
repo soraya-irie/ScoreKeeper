@@ -31,6 +31,10 @@ struct ContentView: View {
                 ForEach($scoreboard.players) { $player in
                     GridRow {
                         HStack {
+                            if scoreboard.winners.contains(player) {
+                                Image(systemName: "crown.fill")
+                                    .foregroundStyle(Color.yellow)
+                            }
                             TextField("Name", text: $player.name)
                         }
                         Text("\(player.score)")
